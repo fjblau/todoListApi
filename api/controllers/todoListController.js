@@ -153,5 +153,5 @@ exports.calcCF = function(req,res) {
   var km = req.body.km;
   var tonnage = req.body.tonnage;
   var cf = ef * km * tonnage;
-  res.json({LocFrom: cfFrom, LocTo: cfTo, distance: d,  CarbonFootrint:cf});
+  res.json({LocFrom: cfFrom, LocTo: cfTo, distance: d, tonnage: req.body.tonnage,  transportMode: req.body.transportMode, CarbonFootrint:cf});
 };
